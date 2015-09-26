@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 <!-- add the CKEditor js script file link for rich text editor use-->
-<script src="//cdn.ckeditor.com/4.5.3/standard/ckeditor.js"></script>
+<script src="//cdn.ckeditor.com/4.5.3/full/ckeditor.js"></script>
 
 @section('pagetitle')
     Cagers Basketball - Add/Edit Articles
