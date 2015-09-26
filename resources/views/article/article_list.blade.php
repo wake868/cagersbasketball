@@ -5,7 +5,7 @@
 @section('mainmenu')
     @foreach ($menuItems as $menuItem)
         <li>
-            <a href="{{url('Article/'.$menuItem->slug)}}">{{$menuItem->menu_text}}</a>
+            <a href="{{url('article/'.$menuItem->slug)}}">{{$menuItem->menu_text}}</a>
         </li>
     @endforeach
 @stop
