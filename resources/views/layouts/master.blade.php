@@ -69,7 +69,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
-                    <img src="{{url('img/logo.png')}}" class="img-responsive" alt="Cagers Logo">
+                    <img src="{{url('img/logo.PNG')}}" class="img-responsive" alt="Cagers Logo">
                     <p style="text-align:center;color:#ff0000;">The <b>BEST</b> never <b>REST</b></p>
                 </div>
                 
