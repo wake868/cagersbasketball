@@ -75,7 +75,6 @@
                 
                 @yield('content')
             </div>
-            <br clear="all" />
             <div class="navbar-inverse navbar-fixed-bottom">
                 <div class="row">
                     <div class="col-md-4">
