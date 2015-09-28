@@ -53,7 +53,7 @@
                 <input name="slug" type="text" class="form-control" value="{{$article->slug}}">
                 <p class="help-block">
                     This value is used for the URL lookup.<br>
-                    <b>Example:</b> Entering StrengthShoe would result in a URL address of (/Article/StrengthShoe).
+                    <b>Example:</b> Entering strengthshoe would result in a URL address of (/article/strengthshoe).
                 </p>
             </div>
             <div class="form-group">
