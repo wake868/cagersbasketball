@@ -58,7 +58,7 @@
             </div>
             <div class="form-group">
                 <label for="content"><b>Content</b></label>
-                <textarea name="content" class="form-control" id="content" style="height:500px;"><?php echo html_entity_decode($article->content); ?></textarea>
+                <textarea name="content" class="form-control" id="content" rows="250"><?php echo html_entity_decode($article->content); ?></textarea>
                 <p class="help-block">This value is used for the main content of the page.</p>
             </div>
             <div class="row">
