@@ -104,12 +104,11 @@ class ArticleController extends Controller{
     }
     public function uploadMedia(Request $request)
     {
-      $files[] = Input::files();
       //$destinationPath = 'upload/';
       //$filename = $file->getClientOriginalName();
       //Input::file('image')->move($destinationPath, $filename);
 
-      dd($files);
+      dd($request);
 
 
     }
