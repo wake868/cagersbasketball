@@ -109,7 +109,7 @@ class ArticleController extends Controller{
       //Input::file('image')->move($destinationPath, $filename);
       //$file = $request->files[0]->originalName;
 
-      dd($request);
+      dd($request->FileBag);
 
 
     }
