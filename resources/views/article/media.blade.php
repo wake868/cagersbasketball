@@ -19,14 +19,20 @@
     -->
     <div class="col-md-9">
         <p><h3><b>Media Upload</b></h3></p>
+        <br /><br />
         <form class="" action="{{url('article/uploadMedia')}}" method="post" enctype="multipart/form-data">
           <div class="form-group">
               <label for="title"><b>Select Files To Upload</b></label>
-              <input name="file_array[]" type="file" class="form-control"><br />
               <input name="file_array[]" type="file" class="form-control">
+              <br /><br />
               <input name="file_array[]" type="file" class="form-control">
+              <br /><br />
               <input name="file_array[]" type="file" class="form-control">
+              <br /><br />
               <input name="file_array[]" type="file" class="form-control">
+              <br /><br />
+              <input name="file_array[]" type="file" class="form-control">
+              <br /><br />
               <button type="submit" class="btn btn-success">Upload Files</button>
           </div>
 
