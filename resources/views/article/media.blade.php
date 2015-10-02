@@ -21,6 +21,7 @@
         <p><h3><b>Media Upload</b></h3></p>
         <br /><br />
         <form class="" action="{{url('article/uploadMedia')}}" method="post" enctype="multipart/form-data">
+          <input type="hidden" name="_token" value="{{csrf_token()}}">
           <div class="form-group">
               <label for="title"><b>Select Files To Upload</b></label>
               <input type="file" name="files[]" multiple>
