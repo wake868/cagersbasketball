@@ -1,21 +1,21 @@
 <?php
- 
+
 namespace App\Http\Controllers;
- 
+
 use App\Models\Article;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Auth;
 use Redirect;
- 
- 
+
+
 class ArticleController extends Controller{
-    
+
     public function __construct()
     {
         $this->middleware('auth', ['only' => 'editArticle']);
     }
-  
+
     public function index(Request $request)
     {
         /*
@@ -23,13 +23,13 @@ class ArticleController extends Controller{
         $value = $request->session()->get('key');
         echo $value;
         */
-        
+
         $menuItems = $this->buildMenu();
         //dd($menuItems);
         $article  = Article::where('slug', 'philosophy')->firstOrFail();
         return view('article/index', ['menuItems' => $menuItems, 'article' => $article]);
     }
- 
+
     public function getArticle($id)
     {
         $menuItems = $this->buildMenu();
@@ -48,7 +48,7 @@ class ArticleController extends Controller{
     {
         $name = 'Mike Wakeland';
         $menuItems = $this->buildMenu();
-        
+
         if ($id == 0)
         {
             $article =  new Article();
@@ -63,15 +63,15 @@ class ArticleController extends Controller{
         {
             $article  = Article::find($id);
         }
-        
-        
-        
+
+
+
         if (Auth::user()->name == 'Mike Wakeland')
         {
             return view('article/edit', ['menuItems' => $menuItems, 'article' => $article]);
-            
+
         }
-        else 
+        else
         {
             return Redirect::to('/article/'.$article->slug);
         }
@@ -95,6 +95,17 @@ class ArticleController extends Controller{
         }
 
         return Redirect::to('/article/list');
+    }
+    public function getMedia()
+    {
+      $menuItems = $this->buildMenu();
+      return view('article.media', ['menuItems' => $menuItems]);
+
+    }
+    public function uploadMedia(Request request)
+    {
+      
+
     }
 
     //*****************
