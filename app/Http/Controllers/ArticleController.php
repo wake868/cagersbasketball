@@ -99,7 +99,7 @@ class ArticleController extends Controller{
     public function getMedia()
     {
       $menuItems = $this->buildMenu();
-      return view('article.media', ['menuItems' => $menuItems]);
+      return view('article/media', ['menuItems' => $menuItems]);
 
     }
     public function uploadMedia(Request $request)
