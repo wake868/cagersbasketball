@@ -4,7 +4,7 @@
 @stop
 @section('mainmenu')
     @foreach ($menuItems as $menuItem)
-        <li <?php if ($article->menu_text == $menuItem->menu_text){echo 'class="active" style="font-weight: bold;"';}?>>
+        <li>
             <a href="{{url('article/'.$menuItem->slug)}}">{{$menuItem->menu_text}}</a>
         </li>
     @endforeach
