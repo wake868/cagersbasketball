@@ -122,7 +122,7 @@ class ArticleController extends Controller{
         }
 
         if(empty($errors)==true){
-          move_uploaded_file($file_tmp,"/public/img/".$file_name);
+          move_uploaded_file($file_tmp, url('img/').$file_name);
           echo "Success";
         }else{
           print_r($errors);
