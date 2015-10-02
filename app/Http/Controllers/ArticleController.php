@@ -13,7 +13,7 @@ class ArticleController extends Controller{
 
     public function __construct()
     {
-        $this->middleware('auth', ['only' => 'editArticle', 'only' => 'getMedia', 'only' => 'uploadMedia']);
+        $this->middleware('auth', ['only' => 'editArticle', 'only' => 'getMedia']);
     }
 
     public function index(Request $request)
