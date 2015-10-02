@@ -24,7 +24,7 @@
           <input type="hidden" name="_token" value="{{csrf_token()}}">
           <div class="form-group">
               <label for="title"><b>Select Files To Upload</b></label>
-              <input type="file" name="files[]" multiple>
+              <input type="file" name="image">
               <button type="submit" class="btn btn-success">Upload Files</button>
           </div>
 
