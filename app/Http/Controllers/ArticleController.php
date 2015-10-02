@@ -114,7 +114,7 @@ class ArticleController extends Controller{
         $extensions = array("jpeg","jpg","png");
 
         if(in_array($file_ext,$extensions )=== false){
-          $errors[]="extension not allowed, please choose a JPEG or PNG file."
+          $errors[]="extension not allowed, please choose a JPEG or PNG file.";
         }
 
         if($file_size > 2097152){
