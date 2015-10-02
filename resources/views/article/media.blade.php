@@ -22,7 +22,7 @@
         <form class="" action="{{url('article/uploadMedia')}}" method="post" enctype="multipart/form-data">
           <div class="form-group">
               <label for="title"><b>Select Files To Upload</b></label>
-              <input name="file_array[]" type="file" class="form-control">
+              <input name="file_array[]" type="file" class="form-control"><br />
               <input name="file_array[]" type="file" class="form-control">
               <input name="file_array[]" type="file" class="form-control">
               <input name="file_array[]" type="file" class="form-control">
