@@ -107,8 +107,9 @@ class ArticleController extends Controller{
       //$destinationPath = 'upload/';
       //$filename = $file->getClientOriginalName();
       //Input::file('image')->move($destinationPath, $filename);
+      $file = $request->files[0]->originalName;
 
-      dd($request);
+      dd($file);
 
 
     }
