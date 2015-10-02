@@ -102,9 +102,9 @@ class ArticleController extends Controller{
       return view('article.media', ['menuItems' => $menuItems]);
 
     }
-    public function uploadMedia(Request request)
+    public function uploadMedia(Request $request)
     {
-      
+
 
     }
 
