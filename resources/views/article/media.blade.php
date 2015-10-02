@@ -23,16 +23,7 @@
         <form class="" action="{{url('article/uploadMedia')}}" method="post" enctype="multipart/form-data">
           <div class="form-group">
               <label for="title"><b>Select Files To Upload</b></label>
-              <input type="file" name="files[]" multiple >
-              <br /><br />
-              <input name="file_array[]" type="file">
-              <br /><br />
-              <input name="file_array[]" type="file">
-              <br /><br />
-              <input name="file_array[]" type="file">
-              <br /><br />
-              <input name="file_array[]" type="file">
-              <br /><br />
+              <input type="file" name="files[]" multiple>
               <button type="submit" class="btn btn-success">Upload Files</button>
           </div>
 
