@@ -13,7 +13,7 @@ class ArticleController extends Controller{
 
     public function __construct()
     {
-        $this->middleware('auth', ['only' => 'editArticle', 'only' => 'getMedia']);
+        $this->middleware('auth', ['only' => 'editArticle', 'only' => 'getMedia', 'only' => 'uploadMedia']);
     }
 
     public function index(Request $request)
@@ -103,6 +103,10 @@ class ArticleController extends Controller{
         $menuItems = $this->buildMenu();
         return view('article/media', ['menuItems' => $menuItems]);
       }
+      else
+      {
+        echo "You do not have permission to upload files on this server!";
+      }
 
     }
     public function uploadMedia()
@@ -134,6 +138,10 @@ class ArticleController extends Controller{
             print_r($errors);
           }
         }
+      }
+      else
+      {
+        echo "You do not have permission to upload files on this server!";
       }
     }
 
