@@ -23,7 +23,19 @@
     -->
     <div class="col-md-9">
         <h3><b>Cagers Basketball - Add/Edit Article</b></h3>
-        <button type="button" class="btn btn-info" data-container="body" data-toggle="popover" data-placement="bottom" data-content="@foreach($mediaFiles as $media)<img src='/img/{{$media}}' width='50' height='50'>&nbsp;/img/{{$media}}<br />@endforeach">
+
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+          Button with data-target
+        </button>
+        <div class="collapse" id="collapseExample">
+          <div class="well">
+            @foreach($mediaFiles as $media)
+              <img src='/img/{{$media}}' width='25' height='25'>&nbsp;/img/{{$media}}<br />
+            @endforeach
+          </div>
+        </div>
+
+        <button type="button" class="btn btn-info" data-container="body" data-toggle="popover" data-placement="bottom" data-content="@foreach($mediaFiles as $media)<img src='/img/{{$media}}' width='25' height='25'>&nbsp;/img/{{$media}}<br />@endforeach">
           View Uploaded Media Files
         </button>
         <hr />
