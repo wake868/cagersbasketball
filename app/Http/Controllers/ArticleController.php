@@ -67,7 +67,6 @@ class ArticleController extends Controller{
 
           closedir($handle);
         }
-        dd($aMedia);
 
         if ($id == 0)
         {
@@ -84,12 +83,9 @@ class ArticleController extends Controller{
             $article  = Article::find($id);
         }
 
-
-
         if (Auth::user()->name == 'Mike Wakeland')
         {
-            return view('article/edit', ['menuItems' => $menuItems, 'article' => $article]);
-
+            return view('article/edit', ['menuItems' => $menuItems, 'article' => $article, 'mediaFiles' => $aMedia]);
         }
         else
         {
