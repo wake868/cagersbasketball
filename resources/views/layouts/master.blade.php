@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="Cagers Basketball Vancouver, WA. Experience excellent basketball skill building, coaches clinics, select teams and all apects of player development.">
         <title>@yield('pagetitle')</title>
-        
+
         <!-- Bootstrap -->
         <link href="{{url('css/bootstrap.min.css')}}" rel="stylesheet">
 
@@ -53,6 +53,7 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="{{ url('/article/list') }}">Article List</a></li>
+                                <li><a href="{{ url('/article/media') }}">Upload Media</a></li>
                                 <li><a href="{{ url('/auth/logout') }}">Logout</a></li>
                             </ul>
 						</li>
@@ -72,7 +73,7 @@
                     <img src="{{url('img/logo.PNG')}}" class="img-responsive" alt="Cagers Logo">
                     <p style="text-align:center;color:#ff0000;">The <b>BEST</b> never <b>REST</b></p>
                 </div>
-                
+
                 @yield('content')
             </div>
             <div class="navbar-inverse navbar-fixed-bottom">
@@ -87,11 +88,11 @@
                 </div>
             </div>
         </div>
-        
-        
+
+
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="{{url('js/jquery-1.11.3.min.js')}}"></script>
-        
+
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="{{url('js/bootstrap.min.js')}}"></script>
     </body>
