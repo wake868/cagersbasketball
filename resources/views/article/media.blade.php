@@ -25,6 +25,7 @@
           <div class="form-group">
               <label for="title"><b>Select File To Upload</b></label>
               <input type="file" name="image">
+              <br/><br />
               <button type="submit" class="btn btn-success">Upload File</button>
           </div>
 
