@@ -58,7 +58,7 @@ class ArticleController extends Controller{
 
           /* This is the correct way to loop over the directory. */
           while (false !== ($entry = readdir($handle))) {
-            if (strpos($aMedia,'.png') !== false||strpos($aMedia,'.jpg') !== false||strpos($aMedia,'.jpeg') !== false||strpos($aMedia,'.pdf') !== false)
+            if (strpos($entry,'.png') !== false||strpos($entry,'.jpg') !== false||strpos($entry,'.jpeg') !== false||strpos($entry,'.pdf') !== false)
             {
               $aMedia[] = $entry;
             }
