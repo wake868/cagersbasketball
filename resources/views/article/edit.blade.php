@@ -29,7 +29,7 @@
         <div class="collapse" id="collapseExample">
           <div class="well">
             @foreach($mediaFiles as $media)
-              <img src='/img/{{$media}}' width='25' height='25'>&nbsp;/img/{{$media}}<br />
+              <img src='/img/{{$media}}' width='75' height='75'>&nbsp;/img/{{$media}}<br />
             @endforeach
           </div>
         </div>
