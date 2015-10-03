@@ -48,6 +48,23 @@ class ArticleController extends Controller{
     {
         $name = 'Mike Wakeland';
         $menuItems = $this->buildMenu();
+        $aMedia = array();
+
+        //get list of available media files
+        if ($handle = opendir('/path/to/files'))
+        {
+          echo "Directory handle: $handle\n";
+          echo "Entries:\n";
+
+          /* This is the correct way to loop over the directory. */
+          while (false !== ($entry = readdir($handle))) {
+            $aMedia[] = $entry;
+            echo "$entry\n";
+          }
+
+          closedir($handle);
+        }
+        dd($aMedia);
 
         if ($id == 0)
         {
