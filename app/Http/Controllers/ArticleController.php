@@ -53,14 +53,12 @@ class ArticleController extends Controller{
         //get list of available media files
         if ($handle = opendir('/home/forge/default/public/img/'))
         {
-          echo "Directory handle: $handle\n";
-          echo "Entries:\n";
 
           /* This is the correct way to loop over the directory. */
           while (false !== ($entry = readdir($handle))) {
             if (strpos($entry,'.png') !== false||strpos($entry,'.jpg') !== false||strpos($entry,'.jpeg') !== false||strpos($entry,'.pdf') !== false)
             {
-              $media = $media.$entry.$PHP_EOL;
+              $media = $media + $entry + "\r\n";
             }
 
           }
