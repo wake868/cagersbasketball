@@ -85,7 +85,7 @@ class ArticleController extends Controller{
 
         if (Auth::user()->name == 'Mike Wakeland')
         {
-            return view('article/edit', ['menuItems' => $menuItems, 'article' => $article, 'mediaFiles' => $aMedia]);
+            return view('article/edit', ['menuItems' => $menuItems, 'article' => $article, 'mediaFiles' => $media]);
         }
         else
         {
