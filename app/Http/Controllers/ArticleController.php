@@ -132,7 +132,7 @@ class ArticleController extends Controller{
             if(empty($errors)==true)
             {
               move_uploaded_file($file_tmp, "/home/forge/default/public/img/" . $file_name);
-              echo "Success.<br /><br />File URL: /img/".$file_name;
+              echo 'Success.<br /><br />File URL: /img/'.$file_name.'<br /><br /><a href="/article/media">Back</a>';
             }
             else
             {
