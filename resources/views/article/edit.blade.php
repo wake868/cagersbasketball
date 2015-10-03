@@ -58,6 +58,10 @@
             </div>
             <div class="form-group">
                 <label for="content"><b>Content</b></label>
+                <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="bottom"
+                data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                  Popover on bottom
+                </button>
                 <textarea name="content" class="form-control" id="content" rows="250"><?php echo html_entity_decode($article->content); ?></textarea>
                 <p class="help-block">This value is used for the main content of the page.</p>
             </div>
@@ -73,6 +77,10 @@
                 // Replace the <textarea id="editor1"> with a CKEditor
                 // instance, using default configuration.
                 CKEDITOR.replace( 'content' );
+
+                $(function () {
+                  $('[data-toggle="popover"]').popover()
+                });
             </script>
         </form>
     </div>
