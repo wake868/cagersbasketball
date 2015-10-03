@@ -23,6 +23,10 @@
     -->
     <div class="col-md-9">
         <h3><b>Cagers Basketball - Add/Edit Article</b></h3>
+        <button type="button" class="btn btn-info" data-container="body" data-toggle="popover" data-placement="bottom" style="margin-left:15px;"
+        data-content="@foreach($mediaFiles as $media)<img src='/img/{{$media}}' width='25' height='25'>&nbsp;/img/{{$media}}<br />@endforeach">
+          View Uploaded Media Files
+        </button>
         <hr />
         <form method="post" action="{{url('article/update/'.$article->id)}}" >
             <input type="hidden" name="_token" value="{{csrf_token()}}">
@@ -58,10 +62,6 @@
             </div>
             <div class="form-group">
                 <label for="content"><b>Content</b></label>
-                <button type="button" class="btn btn-info" data-container="body" data-toggle="popover" data-placement="bottom" style="margin-left:15px;"
-                data-content="@foreach($mediaFiles as $media)<img src='/img/{{$media}}' width='25' height='25'>&nbsp;/img/{{$media}}<br />@endforeach">
-                  View Uploaded Media Files
-                </button>
                 <textarea name="content" class="form-control" id="content" rows="250"><?php echo html_entity_decode($article->content); ?></textarea>
                 <p class="help-block">This value is used for the main content of the page.</p>
             </div>
