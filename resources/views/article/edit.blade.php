@@ -58,9 +58,9 @@
             </div>
             <div class="form-group">
                 <label for="content"><b>Content</b></label>
-                <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="bottom" style="margin-left:15px;width:200px;"
+                <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="bottom" style="margin-left:15px;width:250px;"
                 data-content="@foreach($mediaFiles as $media)<img src='/img/{{$media}}' width='50' height='50'> /img/{{$media}}<br />@endforeach">
-                  Uploaded Media Files
+                  View Uploaded Media Files
                 </button>
                 <textarea name="content" class="form-control" id="content" rows="250"><?php echo html_entity_decode($article->content); ?></textarea>
                 <p class="help-block">This value is used for the main content of the page.</p>
