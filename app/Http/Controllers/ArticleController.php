@@ -122,7 +122,7 @@ class ArticleController extends Controller{
           $file_type=$_FILES['image']['type'];
           $file_ext = explode(".", $_FILES['image']['name']);
 
-          if(file_ext[1] == 'jpg'||$file_ext[1] == 'jpeg'||$file_ext[1] == 'png'||$file_ext[1] == 'pdf')
+          if($file_ext[1] == 'jpg'||$file_ext[1] == 'jpeg'||$file_ext[1] == 'png'||$file_ext[1] == 'pdf')
           {
             if($file_size > 2097152)
             {
@@ -137,7 +137,7 @@ class ArticleController extends Controller{
             else
             {
               print_r($errors);
-            }      
+            }
           }
           else
           {
