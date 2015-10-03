@@ -141,7 +141,7 @@ class ArticleController extends Controller{
           }
           else
           {
-            echo "Invalid file type.<br /></br>Only jpg, jpeg, png and pdf files are allowed.";
+            echo 'Invalid file type.<br /></br>Only jpg, jpeg, png and pdf files are allowed.<br /><br /><a href="/article/media">Back</a>';
           }
         }
       }
