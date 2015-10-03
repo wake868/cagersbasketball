@@ -48,7 +48,7 @@ class ArticleController extends Controller{
     {
         $name = 'Mike Wakeland';
         $menuItems = $this->buildMenu();
-        $media = '';
+        $mediaFiles = array();
 
         //get list of available media files
         if ($handle = opendir('/home/forge/default/public/img/'))
@@ -58,7 +58,7 @@ class ArticleController extends Controller{
           while (false !== ($entry = readdir($handle))) {
             if (strpos($entry,'.png') !== false||strpos($entry,'.jpg') !== false||strpos($entry,'.jpeg') !== false||strpos($entry,'.pdf') !== false)
             {
-              $media = $media + $entry + "\r\n";
+              $mediaFiles[] = $entry;
             }
 
           }
@@ -83,7 +83,7 @@ class ArticleController extends Controller{
 
         if (Auth::user()->name == 'Mike Wakeland')
         {
-            return view('article/edit', ['menuItems' => $menuItems, 'article' => $article, 'mediaFiles' => $media]);
+            return view('article/edit', ['menuItems' => $menuItems, 'article' => $article, 'mediaFiles' => $mediaFiles]);
         }
         else
         {

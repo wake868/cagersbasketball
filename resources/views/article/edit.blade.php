@@ -59,7 +59,7 @@
             <div class="form-group">
                 <label for="content"><b>Content</b></label>
                 <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="bottom"
-                data-content="{{$mediaFiles[0]}}">
+                data-content="@foreach($mediaFiles as $media){{$media}}@endforeach">
                   Media Files
                 </button>
                 <textarea name="content" class="form-control" id="content" rows="250"><?php echo html_entity_decode($article->content); ?></textarea>
