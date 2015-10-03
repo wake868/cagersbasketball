@@ -98,7 +98,7 @@
         <script type="text/javascript">
           $(document).ready(function () {
             $(function () {
-              $('[data-toggle="popover"]').popover({html:true, container:'body'})
+              $('[data-toggle="popover"]').popover({html:true, max-width:800px; width:auto;})
             });
           });
         </script>
