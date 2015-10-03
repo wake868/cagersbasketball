@@ -51,7 +51,7 @@ class ArticleController extends Controller{
         $aMedia = array();
 
         //get list of available media files
-        if ($handle = opendir('/path/to/files'))
+        if ($handle = opendir('/home/forge/default/public/img/'))
         {
           echo "Directory handle: $handle\n";
           echo "Entries:\n";
