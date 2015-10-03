@@ -58,8 +58,8 @@
             </div>
             <div class="form-group">
                 <label for="content"><b>Content</b></label>
-                <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="bottom" style="margin-left:15px;width:250px;"
-                data-content="@foreach($mediaFiles as $media)<img src='/img/{{$media}}' width='50' height='50'> /img/{{$media}}<br />@endforeach">
+                <button type="button" class="btn btn-info" data-container="body" data-toggle="popover" data-placement="bottom" style="margin-left:15px;width:250px;"
+                data-content="@foreach($mediaFiles as $media)<img src='/img/{{$media}}' width='50' height='50'>&nbsp;/img/{{$media}}<br />@endforeach">
                   View Uploaded Media Files
                 </button>
                 <textarea name="content" class="form-control" id="content" rows="250"><?php echo html_entity_decode($article->content); ?></textarea>
