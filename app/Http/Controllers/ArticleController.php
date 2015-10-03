@@ -122,29 +122,26 @@ class ArticleController extends Controller{
           $file_type=$_FILES['image']['type'];
           $file_ext = explode(".", $_FILES['image']['name']);
 
-          if(!$file_ext[1] == 'jpg'||!$file_ext[1] == 'jpeg'||!$file_ext[1] == 'png'||!$file_ext[1] == 'pdf'){
-              echo "Invalid file type";
-              Return;
+          if(file_ext[1] == 'jpg'||$file_ext[1] == 'jpeg'||$file_ext[1] == 'png'||$file_ext[1] == 'pdf')
+          {
+            if($file_size > 2097152)
+            {
+              $errors[]='File size must be excately 2 MB';
+            }
+
+            if(empty($errors)==true)
+            {
+              move_uploaded_file($file_tmp, "/home/forge/default/public/img/" . $file_name);
+              echo "Success.<br /><br />File URL: /img/".$file_name;
+            }
+            else
+            {
+              print_r($errors);
+            }      
           }
-
-
-
-          /*$file_ext=strtolower(end(explode('.',$_FILES['image']['name'])));
-          $extensions = array("jpeg","jpg","png");
-
-          if(in_array($file_ext,$extensions )=== false){
-            $errors[]="extension not allowed, please choose a JPEG or PNG file.";
-          }*/
-
-          if($file_size > 2097152){
-            $errors[]='File size must be excately 2 MB';
-          }
-
-          if(empty($errors)==true){
-            move_uploaded_file($file_tmp, "/home/forge/default/public/img/" . $file_name);
-            echo "Success.<br /><br />File URL: /img/".$file_name;
-          }else{
-            print_r($errors);
+          else
+          {
+            echo "Invalid file type";
           }
         }
       }
