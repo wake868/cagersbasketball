@@ -60,7 +60,7 @@ class ArticleController extends Controller{
           while (false !== ($entry = readdir($handle))) {
             if (strpos($entry,'.png') !== false||strpos($entry,'.jpg') !== false||strpos($entry,'.jpeg') !== false||strpos($entry,'.pdf') !== false)
             {
-              $media = "/img/".$entry."<br />";
+              $media = $media.$entry.$PHP_EOL;
             }
 
           }
