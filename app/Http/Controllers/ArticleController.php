@@ -120,6 +120,15 @@ class ArticleController extends Controller{
           $file_size =$_FILES['image']['size'];
           $file_tmp =$_FILES['image']['tmp_name'];
           $file_type=$_FILES['image']['type'];
+          $file_ext = explode(".", $_FILES['image']['name']);
+
+          if(!$file_ext[1] == 'jpg'||!$file_ext[1] == 'jpeg'||!$file_ext[1] == 'png'||!$file_ext[1] == 'pdf'){
+              echo "Invalid file type";
+              Return;
+          }
+
+
+
           /*$file_ext=strtolower(end(explode('.',$_FILES['image']['name'])));
           $extensions = array("jpeg","jpg","png");
 
