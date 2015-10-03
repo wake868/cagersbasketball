@@ -58,7 +58,7 @@
             </div>
             <div class="form-group">
                 <label for="content"><b>Content</b></label>
-                <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="bottom" style="margin-left:15px;"
+                <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="bottom" style="margin-left:15px;width:200px;"
                 data-content="@foreach($mediaFiles as $media)<img src='/img/{{$media}}' width='50' height='50'> /img/{{$media}}<br />@endforeach">
                   Uploaded Media Files
                 </button>
