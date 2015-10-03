@@ -77,14 +77,6 @@
                 // Replace the <textarea id="editor1"> with a CKEditor
                 // instance, using default configuration.
                 CKEDITOR.replace( 'content' );
-
-                $(document).ready(function () {
-                  $(function () {
-                    $('[data-toggle="popover"]').popover()
-                  });
-                });
-
-
             </script>
         </form>
     </div>
