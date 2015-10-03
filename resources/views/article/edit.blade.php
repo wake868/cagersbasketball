@@ -78,9 +78,13 @@
                 // instance, using default configuration.
                 CKEDITOR.replace( 'content' );
 
-                $(function () {
-                  $('[data-toggle="popover"]').popover()
+                $(document).ready(function () {
+                  $(function () {
+                    $('[data-toggle="popover"]').popover()
+                  });
                 });
+
+
             </script>
         </form>
     </div>
