@@ -51,7 +51,7 @@ class ArticleController extends Controller{
         $mediaFiles = array();
 
         //get list of available media files
-        if ($handle = opendir("/home/forge/default/public/img/"))
+        if ($handle = opendir("/var/www/cagersbasketball/public/img/"))
         {
 
           /* This is the correct way to loop over the directory. */
@@ -145,7 +145,7 @@ class ArticleController extends Controller{
 
             if(empty($errors)==true)
             {
-              move_uploaded_file($file_tmp, "/home/forge/default/public/img/" . $file_name);
+              move_uploaded_file($file_tmp, "/var/www/cagersbasketball/public/img/" . $file_name);
               echo 'Success.<br /><br />File URL: /img/'.$file_name.'<br /><br /><a href="/article/media">Back</a>';
             }
             else
