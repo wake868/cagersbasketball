@@ -105,6 +105,7 @@ class ArticleController extends Controller{
             $article->menu_text = $request->input('menu_text');
             $article->slug = $request->input('slug');
             $article->content = $request->input('content');
+            $article->rank = $request->input('rank');
             $article->save();
         }
 
