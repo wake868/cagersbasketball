@@ -81,7 +81,7 @@ class ArticleController extends Controller{
             $article  = Article::find($id);
         }
 
-        if (Auth::user()->name == 'Mike Wakeland')
+        if (Auth::user()->name == 'Mike Wakeland' || Auth::user()->name == 'Greg Edwards')
         {
             return view('article/edit', ['menuItems' => $menuItems, 'article' => $article, 'mediaFiles' => $mediaFiles]);
         }
@@ -112,7 +112,7 @@ class ArticleController extends Controller{
     }
     public function getMedia()
     {
-      if (Auth::user()->name == 'Mike Wakeland')
+      if (Auth::user()->name == 'Mike Wakeland' || Auth::user()->name == 'Greg Edwards')
       {
         $menuItems = $this->buildMenu();
         return view('article/media', ['menuItems' => $menuItems]);
@@ -125,7 +125,7 @@ class ArticleController extends Controller{
     }
     public function uploadMedia()
     {
-      if (Auth::user()->name == 'Mike Wakeland')
+      if (Auth::user()->name == 'Mike Wakeland' || Auth::user()->name == 'Greg Edwards')
       {
 
         if(isset($_FILES['image'])){
