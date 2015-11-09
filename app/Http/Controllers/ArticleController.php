@@ -170,7 +170,7 @@ class ArticleController extends Controller{
     //*****************
     public function buildMenu()
     {
-        $menu = Article::orderBy('rank', 'asc')->get();
+        $menu = Article::orderBy('rank', 'asc')->where('rank', '<', 99)->get();
         return $menu;
     }
 
